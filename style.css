@@ -2,9 +2,14 @@
     --grid-cols:1;
     --grid-rows:1;
 }
+
 h1{
     text-align: center;
+    font-family: 'Raleway Dots';
+    font-size: 100px;
+    color: grey;
 }
+
 #button {
     text-align: center;
 }
@@ -30,4 +35,7 @@ button{
     border: 1px solid #ddd;
     text-align: center;
     
+}
+html {
+    background-color: #f2fcf5;
 }
