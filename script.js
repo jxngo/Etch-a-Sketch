@@ -1,14 +1,14 @@
 const containerSqDiv = document.querySelector("#sqDivs");
 const resetButton = document.querySelector("#resetBut");
 
-makeRows(16,16);
+makeRows(16);
 
 
-function makeRows(rows,cols) {
-    containerSqDiv.style.setProperty('--grid-rows', rows);
-    containerSqDiv.style.setProperty('--grid-cols',cols);
+function makeRows(numCell) {
+    containerSqDiv.style.setProperty('--grid-rows', numCell);
+    containerSqDiv.style.setProperty('--grid-cols',numCell);
 
-    for (c = 0; c < (rows * cols); c++ ){
+    for (c = 0; c < (numCell*numCell); c++ ){
         let cell = document.createElement("div");
         containerSqDiv.appendChild(cell).className="grid-item";
         cell.addEventListener('mouseenter', (e) => {
@@ -18,14 +18,13 @@ function makeRows(rows,cols) {
 }
 
 function reset() {
-    let cols, rows;
+    let cell;
     containerSqDiv.innerHTML = '';
-    rows = window.prompt("Enter rows");
-    cols = window.prompt("Enter cols");
-    if (rows !== null || cols !== null)
-    makeRows(rows,cols);
+    cell = window.prompt("Enter number of cells");
+    if (cell !== null)
+    makeRows(cell);
     else
-        makeRows(16,16);
+        makeRows(16);
 }
 
 resetButton.addEventListener("click",reset);
