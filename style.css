@@ -12,6 +12,7 @@ h1{
 
 #button {
     text-align: center;
+    padding-bottom: 50px;
 }
 button{
     border-radius: 10px;
@@ -19,7 +20,7 @@ button{
     height: 25px;
     font-size: 15px;
     outline:none;
-    cursor:pointer;
+    cursor:pointer;   
 }
 
 #sqDivs{
@@ -27,14 +28,15 @@ button{
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols),1fr);
-    width:50%;
-    padding-top: 50px;
+    width:400px;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .grid-item{
-    padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
-    
+    padding: 0;   
 }
 html {
     background-color: #f2fcf5;

@@ -10,6 +10,8 @@ function makeRows(numCell) {
 
     for (c = 0; c < (numCell*numCell); c++ ){
         let cell = document.createElement("div");
+        cell.style.width = 400/numCell + 'px';
+        cell.style.height = 400/numCell + 'px';
         containerSqDiv.appendChild(cell).className="grid-item";
         cell.addEventListener('mouseenter', (e) => {
             cell.style.background= "#b5cdbe";
